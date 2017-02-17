@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Item = ({ id, name, complete, onTodoClick }) => (
+const Item = ({ name, id,  complete, onTodoClick }) => (
   <li
-    onClick={() => onTodoClick(id)}
-    style={ complete ? { textDecoration: 'line-through', color: 'grey' } : {} }
+    onClick={ () => onTodoClick(id)} 
+    style={ complete ? { textDecoration: 'line-through', color: 'red' } : {} }
   >
     {name}
   </li>

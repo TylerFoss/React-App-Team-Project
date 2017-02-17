@@ -25,13 +25,7 @@ class TodoApp extends React.Component{
       this.setState({ items });
     }
 
-  //..
-
-  render() {
-    //..
-    <List items={this.state.items} onTodoClick={this.onTodoClick} />
-  }
-
+  
   addTodoItem(name){
     let id = ++this.state.id;
     this.setState({
@@ -47,7 +41,7 @@ class TodoApp extends React.Component{
     return(
       <div>
       <TodoForm addTodoItem={this.addTodoItem} />
-      <List items={this.state.items} />
+      <List items={this.state.items} onTodoClick={this.onTodoClick} />
       </div>
     )
   }
